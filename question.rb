@@ -1,5 +1,5 @@
 class Question
-  attr_accessor :player_answer, :correct_answer, :number_one, :number_two
+  attr_accessor :player_answer, :correct_answer, :number_one, :number_two, :current_answer
 
   def initialize
     @number_one = 1 + rand(20)
@@ -14,12 +14,12 @@ class Question
   end
 
   def check_answer
-    puts self.player_answer
-    puts self.correct_answer
     if self.player_answer == self.correct_answer
       puts "Correct"
+      @current_answer = true
     else
       puts "Incorrect"
+      @current_answer = false
     end
   end
 

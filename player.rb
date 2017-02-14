@@ -2,9 +2,8 @@ class Player
   attr_accessor :name, :lives, :answer
 
   def initialize (name)
-    name = name
-    lives = 3
-    answer = false
+    @name = name
+    @lives = 3
   end
 
   def correct_answer
