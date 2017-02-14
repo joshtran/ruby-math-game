@@ -8,17 +8,15 @@ class Question
   end
 
   def ask_question
-    puts "Question: #{self.number_one} + #{self.number_two}"
+    puts "#{self.number_one} + #{self.number_two}"
     @player_answer = gets.to_i
     check_answer
   end
 
   def check_answer
     if self.player_answer == self.correct_answer
-      puts "Correct"
       @current_answer = true
     else
-      puts "Incorrect"
       @current_answer = false
     end
   end
